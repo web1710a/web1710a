@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>	
+			@keyframes scroll{
+				/*定义该动画所有的关键帧*/
+					0%{
+						transform:rotate(0deg);	      /*动画开始时*/				
+					}
+					25%{
+						transform:rotate(90deg);		/*动画执行到1/4时的样式*/
+					}
+					50%{
+						transform:rotate(180deg);		/*动画执行到一半的样式*/
+					}
+					75%{
+						transform:rotate(270deg); 	   /*动画执行到3/4时的样式*/
+					}
+					100%{
+						transform:rotate(360deg);		/*动画执行完成时的样式*/
+					}
+			}
+	
+			#a0{
+				width:200px;
+				height:200px;
+				border:2px solid deepskyblue;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				position: relative;
+				
+			}
+			#a1{
+				width: 2px;
+				height:100px;
+				background: red;
+						
+				position:absolute;
+				top:0%;
+				left:50%;
+				
+				transform-origin:center bottom;
+				animation-name:scroll;
+				animation-duration:60s;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;	
+				animation-play-state:running;
+				}
+				
+			#a2{
+				width:4px;
+				height:50px;
+				background:black;
+				transform-origin:bottom;
+				position:absolute;
+				top:25%;
+				left:50%;
+				
+				transform-origin:center bottom;
+				animation-name:scroll;
+				animation-duration:3600s;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;	
+				animation-play-state:running;	
+				
+			}
+			
+		
+			
+		</style>
+	</head>
+	<body>
+		<div id="a0">
+			<div id="a1"></div>
+			<div id="a2"></div>
+		</div>
+		
+	</body>
+</html>
